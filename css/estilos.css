@@ -1,27 +1,45 @@
-
 table{
-    /*definimos el grosor de la linea*/
-    /*border: 0.5vw solid #251608;*/
     border-collapse: collapse;
-    outline: 2vw solid #5d311f;
+    outline: 2vw ridge #5d311f;
     margin: 6vh auto;
     width: 40vw;
     height: 40vw;
 }
+
 tr, td{
     border: none;
 }
+
+td.celda{
+    background-image: none;
+}
+
+td.reina{
+    background-image: url(../img/reina.png);
+    background-size: cover;
+}
+
+td.inactivo{
+    background-image: url(../img/candadito.png);
+    background-size: cover;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 td{
     cursor: pointer;
     height: 5%;
     width: 5%;
 }
+
 tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even){
     background-color: #1a0404;
 }
+
 tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     background-color: #ffe7bd;
 }
+
 @media only screen and (max-width: 768px) {
     table{
         width: 80vw;
