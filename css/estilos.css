@@ -14,6 +14,10 @@ td.celda{
     background-image: none;
 }
 
+td.celda:hover{
+    filter: brightness(50%);
+}
+
 td.reina{
     background-image: url(../img/reina.png);
     background-size: cover;
@@ -23,7 +27,6 @@ td.inactivo{
     background-image: url(../img/candadito.png);
     background-size: cover;
     pointer-events: none;
-    cursor: not-allowed;
 }
 
 td{
