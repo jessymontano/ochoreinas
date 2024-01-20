@@ -144,6 +144,5 @@ function colocarReina(celda){
     }
 
     //actualizar contador de reinas
-    document.getElementById("textoReinasPorColocar").innerHTML = "Reinas por colocar: " + reinas;
-    document.getElementById("textoReinasColocadas").innerHTML = "Reinas colocadas: " + (8 - reinas);
+    document.getElementById("textoReinas").innerHTML = `Reinas por colocar: ${reinas}. Reinas colocadas: ${(8-reinas)}.`;
 }
