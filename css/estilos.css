@@ -62,5 +62,9 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
         outline: 4vw outset #5d311f;
         margin: 10vh auto;
     }
+    p{
+        font-size: large;
+        margin-top: 5vh;
+    }
 }
 
