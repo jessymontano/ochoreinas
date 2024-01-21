@@ -27,40 +27,15 @@ function colocarReina(celda){
         }
         
         //desactivar diagonales
-        var r = renglon - 1;
-        var c = columna + 1;
-        while (r >= 0 && c < 8) {
-            tablero.rows[r].cells[c].classList.add("inactivo");
-            inactivas.push(`${r} ${c}`);
-            r--;
-            c++;
-        }
-
-        r = renglon + 1;
-        c = columna -1;
-        while (c >= 0 && r < 8) {
-            tablero.rows[r].cells[c].classList.add("inactivo");
-            inactivas.push(`${r} ${c}`);
-            r++;
-            c--;
-        }
-
-        r = renglon + 1;
-        c = columna + 1;
-        while (c < 8 && c >= 0 && r < 8 && r >= 0) {
-            tablero.rows[r].cells[c].classList.add("inactivo");
-            inactivas.push(`${r} ${c}`);
-            r++;
-            c++;
-        }
-
-        r = renglon -1;
-        c = columna -1;
-        while(c < 8 && c >= 0 && r < 8 && r >= 0){
-            tablero.rows[r].cells[c].classList.add("inactivo");
-            inactivas.push(`${r} ${c}`);
-            r--;
-            c--;
+        for (let i = -7; i < 8; i++) {
+            if (renglon + i >= 0 && renglon + i < 8 && columna + i >= 0 && columna + i < 8 && i != 0) {
+                tablero.rows[renglon + i].cells[columna + i].classList.add("inactivo");
+                inactivas.push(`${renglon + i} ${columna + i}`);
+            }
+            if (renglon - i >= 0 && renglon - i < 8 && columna + i >= 0 && columna + i < 8 && i != 0) {
+                tablero.rows[renglon - i].cells[columna + i].classList.add("inactivo");
+                inactivas.push(`${renglon - i} ${columna + i}`);
+            }
         }
     }
     //quitar reina
@@ -85,61 +60,27 @@ function colocarReina(celda){
                 tablero.rows[renglon].cells[i].classList.remove("inactivo");
             }
         }
-
-        var r = renglon;
-        var c = columna;
-        while (r >= 0 && c < 8) {
-            if (inactivas.includes(`${r} ${c}`)) {
-                index = inactivas.indexOf(`${r} ${c}`);
-                inactivas.splice(index, 1)
+        
+        //reactivar diagonales
+        for (let i = -7; i < 8; i++) {
+            if (renglon + i >= 0 && renglon + i < 8 && columna + i >= 0 && columna + i < 8 && i !== 0) {
+                if (inactivas.includes(`${renglon + i} ${columna + i}`)) {
+                    index = inactivas.indexOf(`${renglon + i} ${columna + i}`);
+                    inactivas.splice(index, 1)
+                }
+                if(!inactivas.includes(`${renglon + i} ${columna + i}`)) {
+                    tablero.rows[renglon + i].cells[columna + i].classList.remove("inactivo");
+                }
             }
-            if(!inactivas.includes(`${r} ${c}`)) {
-                tablero.rows[r].cells[c].classList.remove("inactivo");
+            if (renglon - i >= 0 && renglon - i < 8 && columna + i >= 0 && columna + i < 8 && i !== 0) {
+                if (inactivas.includes(`${renglon - i} ${columna + i}`)) {
+                    index = inactivas.indexOf(`${renglon - i} ${columna + i}`);
+                    inactivas.splice(index, 1)
+                }
+                if(!inactivas.includes(`${renglon - i} ${columna + i}`)) {
+                    tablero.rows[renglon - i].cells[columna + i].classList.remove("inactivo");
+                }
             }
-            r--;
-            c++;
-        }
-
-        r = renglon + 1;
-        c = columna -1;
-        while (c >= 0 && r < 8) {
-            if (inactivas.includes(`${r} ${c}`)) {
-                index = inactivas.indexOf(`${r} ${c}`);
-                inactivas.splice(index, 1)
-            }
-            if(!inactivas.includes(`${r} ${c}`)) {
-                tablero.rows[r].cells[c].classList.remove("inactivo");
-            }
-            r++;
-            c--;
-        }
-
-        r = renglon + 1;
-        c = columna + 1;
-        while (c < 8 && c >= 0 && r < 8 && r >= 0) {
-            if (inactivas.includes(`${r} ${c}`)) {
-                index = inactivas.indexOf(`${r} ${c}`);
-                inactivas.splice(index, 1)
-            }
-            if(!inactivas.includes(`${r} ${c}`)) {
-                tablero.rows[r].cells[c].classList.remove("inactivo");
-            }
-            r++;
-            c++;
-        }
-
-        r = renglon -1;
-        c = columna -1;
-        while(c < 8 && c >= 0 && r < 8 && r >= 0){
-            if (inactivas.includes(`${r} ${c}`)) {
-                index = inactivas.indexOf(`${r} ${c}`);
-                inactivas.splice(index, 1)
-            }
-            if(!inactivas.includes(`${r} ${c}`)) {
-                tablero.rows[r].cells[c].classList.remove("inactivo");
-            }
-            r--;
-            c--;
         }
     }
 
