@@ -3,7 +3,7 @@ var reinas = 8; //reinas por colocar
 
 function colocarReina(celda){
 
-    tablero = document.getElementById("tablero"); 
+    tablero = document.getElementById("js-tablero"); 
     renglon = celda.parentElement.rowIndex;
     columna = celda.cellIndex;
 
@@ -45,10 +45,12 @@ function colocarReina(celda){
 
         //reactivar renglones y columnas
         for (let i = 0; i < 8; i++) {
+            // QUITA 1 COORDENADA INDEX INACTIVO
             if (inactivas.includes(`${i} ${columna}`)) {
                 index = inactivas.indexOf(`${i} ${columna}`);
                 inactivas.splice(index, 1);
             }
+            // QUITA COORDENADA CLASE INACTIVO
             if(!inactivas.includes(`${i} ${columna}`)) {
                 tablero.rows[i].cells[columna].classList.remove("inactivo");
             }
@@ -85,5 +87,5 @@ function colocarReina(celda){
     }
 
     //actualizar contador de reinas
-    document.getElementById("textoReinas").innerHTML = `Reinas por colocar: ${reinas}. Reinas colocadas: ${(8-reinas)}.`;
+    document.getElementById("js-texto-reinas").innerHTML = `Reinas por colocar: ${reinas}. Reinas colocadas: ${(8-reinas)}.`;
 }
