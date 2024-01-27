@@ -27,7 +27,8 @@ td.celda{
 }
 
 td.celda:hover{
-    filter: brightness(50%);
+    background-image: url(../img/reina.png);
+    background-size: cover;
 }
 
 td.reina{
@@ -35,8 +36,12 @@ td.reina{
     background-size: cover;
 }
 
+td.reina:hover{
+    background-image: url(../img/cancelado.png);
+}
+
 td.inactivo{
-    background-image: url(../img/candadito.png);
+    background-image: url(../img/lineas.png);
     background-size: cover;
     pointer-events: none;
 }
