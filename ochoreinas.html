@@ -12,88 +12,92 @@
 
 <body>
     <p id="js-texto-reinas">Reinas por colocar: 8. Reinas colocadas: 0.</p>
-        <table id="js-tablero">
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-            <tr>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-                <td class="celda" onclick="colocarReina(this)"></td>
-            </tr>
-        </table>
+    <div class="ochoreinas">
+        <p id="ganaste">¡¡¡Ganaste!!!</p>
+        <p id="retry" onclick="restart()"><span>↻</span>&nbsp;Volver a jugar</p>
+    </div>
+    <table id="js-tablero">
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+    </table>
 
 </body>
 

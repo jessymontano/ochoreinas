@@ -88,4 +88,14 @@ function colocarReina(celda){
 
     //actualizar contador de reinas
     document.getElementById("js-texto-reinas").innerHTML = `Reinas por colocar: ${reinas}. Reinas colocadas: ${(8-reinas)}.`;
+
+    if (reinas === 0){
+        var ganaste = document.querySelector(".ochoreinas");
+        ganaste.style.opacity = 1;
+        ganaste.style.pointerEvents = "all";
+    }
+}
+
+function restart(){
+    window.location.reload();
 }
