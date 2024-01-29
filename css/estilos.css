@@ -110,14 +110,34 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
 
 @media only screen and (max-width: 768px) {
     table{
-        width: 80vw;
-        height: 80vw;
-        outline: 4vw outset #5d311f;
-        margin: 10vh auto;
+        width: 90vw;
+        height: 90vw;
+        margin: 7vh auto;
     }
+
     p{
-        font-size: large;
-        margin-top: 5vh;
+        font-size: x-large;
+        margin-top: 7vh;
+    }
+
+    div.ochoreinas{
+        top: 35vh;
+        width: 100%;
+        background-color: rgba(75, 75, 234, 0.84);
+        padding: 2vw;
+        padding-left: 0;
+        color:blanchedalmond;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    
+    #ganaste{
+        font-size: 10vw;
+    }
+    
+    #retry{
+        margin: 5vh 0;
+        font-size: 6vw;
+
     }
 }
 
