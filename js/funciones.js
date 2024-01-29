@@ -28,6 +28,7 @@ function colocarReina(celda){
         
         //desactivar diagonales
         for (let i = -6; i < 9; i++) {
+
             if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i != 0 && tablero.rows[renglon + i].cells[columna + i].classList.contains("celda")) {
                 tablero.rows[renglon + i].cells[columna + i].classList.add("inactivo");
                 inactivas.push(`${renglon + i} ${columna + i}`);
@@ -45,12 +46,12 @@ function colocarReina(celda){
 
         //reactivar renglones y columnas
         for (let i = 1; i < 9; i++) {
-            // QUITA 1 COORDENADA INDEX INACTIVO
+            //quitar las coordenadas del array
             if (inactivas.includes(`${i} ${columna}`)) {
                 index = inactivas.indexOf(`${i} ${columna}`);
                 inactivas.splice(index, 1);
             }
-            // QUITA COORDENADA CLASE INACTIVO
+            //quitar la clase de inactivo
             if(!inactivas.includes(`${i} ${columna}`)) {
                 tablero.rows[i].cells[columna].classList.remove("inactivo");
             }
@@ -65,6 +66,7 @@ function colocarReina(celda){
         
         //reactivar diagonales
         for (let i = -6; i < 9; i++) {
+
             if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i !== 0) {
                 if (inactivas.includes(`${renglon + i} ${columna + i}`)) {
                     index = inactivas.indexOf(`${renglon + i} ${columna + i}`);
@@ -89,13 +91,13 @@ function colocarReina(celda){
     //actualizar contador de reinas
     document.getElementById("js-texto-reinas").innerHTML = `Reinas por colocar: ${reinas}. Reinas colocadas: ${(8-reinas)}.`;
 
+    //iniciar animacion
     if (reinas === 0){
-        var ganaste = document.querySelector(".ochoreinas");
-        ganaste.style.opacity = 1;
-        ganaste.style.pointerEvents = "all";
+        document.querySelector(".ochoreinas").style.animationPlayState = "running";
     }
 }
 
+//refrescar pagina
 function restart(){
     window.location.reload();
 }

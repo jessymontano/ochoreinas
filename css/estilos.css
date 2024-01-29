@@ -3,17 +3,32 @@
     src: url(../fonts/pixellari.woff) format('woff');
 }
 
+@keyframes ganar{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    60%{
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    to{
+        transform: scale(1);
+        pointer-events: all;
+    }
+}
+
 p{
+    color:white;
     font-size: x-large;
     margin: 1vh;
-    color:white;
 }
 
 body{
     margin: 0;
     text-align: center;
-    font-family: pixellari, sans-serif;
     font-size: larger;
+    font-family: pixellari, sans-serif;
     background-image: url(../img/mesa.jpg);
     background-repeat: repeat;
     background-size: auto;
@@ -21,25 +36,25 @@ body{
 
 input{
     margin-top: 1vh;
-    border: none;
+    padding: 1vh;
     font-family: pixellari, sans-serif;
     font-size: larger;
     cursor: pointer;
     border-radius: 1vh;
-    padding: 1vh;
+    border: none;
 }
 
 div.ochoreinas{
-    pointer-events: none;
-    opacity: 0;
+    color:blanchedalmond;
     position: fixed;
     top: 30vh;
     width: 100%;
-    background-color: rgba(75, 75, 234, 0.84);
     padding: 2vw;
     padding-left: 0;
-    color:blanchedalmond;
+    background-color: rgba(75, 75, 234, 0.84);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    animation: ganar 600ms cubic-bezier(.03,.84,.58,1) forwards paused;
 }
 
 #ganaste{
@@ -108,6 +123,7 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
     color: wheat;
 }
 
+/*para pantalla de celular*/
 @media only screen and (max-width: 768px) {
     table{
         width: 90vw;
@@ -123,9 +139,9 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
     div.ochoreinas{
         top: 35vh;
         width: 100%;
-        background-color: rgba(75, 75, 234, 0.84);
         padding: 2vw;
         padding-left: 0;
+        background-color: rgba(75, 75, 234, 0.84);
         color:blanchedalmond;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
@@ -137,7 +153,6 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
     #retry{
         margin: 5vh 0;
         font-size: 6vw;
-
     }
 }
 
