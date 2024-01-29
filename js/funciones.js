@@ -27,7 +27,7 @@ function colocarReina(celda){
         }
         
         //desactivar diagonales
-        for (let i = -6; i < 9; i++) {
+        for (let i = -7; i < 9; i++) {
 
             if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i != 0 && tablero.rows[renglon + i].cells[columna + i].classList.contains("celda")) {
                 tablero.rows[renglon + i].cells[columna + i].classList.add("inactivo");
@@ -65,7 +65,7 @@ function colocarReina(celda){
         }
         
         //reactivar diagonales
-        for (let i = -6; i < 9; i++) {
+        for (let i = -7; i < 9; i++) {
 
             if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i !== 0) {
                 if (inactivas.includes(`${renglon + i} ${columna + i}`)) {
