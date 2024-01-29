@@ -66,11 +66,6 @@ div.ochoreinas{
     font-size: 3vw;
 }
 
-#retry:hover{
-    cursor:pointer;
-    color: rgb(149, 131, 255);
-}
-
 table{
     border-collapse: collapse;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -90,18 +85,9 @@ td.celda{
     width: 11%;
 }
 
-td.celda:hover{
-    background-image: url(../img/reina.png);
-    background-size: cover;
-}
-
 td.reina{
     background-image: url(../img/reina.png);
     background-size: cover;
-}
-
-td.reina:hover{
-    background-image: url(../img/cancelado.png);
 }
 
 td.inactivo{
@@ -123,6 +109,23 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
     color: wheat;
 }
 
+/*deshabilitar hover en telefonos moviles*/
+@media (hover: hover){
+    td.reina:hover{
+        background-image: url(../img/cancelado.png);
+    }
+
+    td.celda:hover{
+        background-image: url(../img/reina.png);
+        background-size: cover;
+    }
+
+    #retry:hover{
+        cursor:pointer;
+        color: rgb(149, 131, 255);
+    }
+}
+
 /*para pantalla de celular*/
 @media only screen and (max-width: 768px) {
     table{
@@ -134,6 +137,11 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
     p{
         font-size: x-large;
         margin-top: 7vh;
+    }
+
+    td.celda{
+        height: 10%;
+        width: 10%;
     }
 
     div.ochoreinas{
@@ -155,4 +163,3 @@ td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
         font-size: 6vw;
     }
 }
-
