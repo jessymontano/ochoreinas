@@ -14,25 +14,25 @@ function colocarReina(celda){
         reinas--;
 
         //desactivar renglon y columna
-        for (let i = 0; i < 8; i++) {
+        for (let i = 1; i < 9; i++) {
 
-            if(columna != i){
+            if(columna != i && tablero.rows[renglon].cells[i].classList.contains("celda")){
                 tablero.rows[renglon].cells[i].classList.add("inactivo");
                 inactivas.push(`${renglon} ${i}`);
             }
-            if(renglon != i){
+            if(renglon != i && tablero.rows[i].cells[columna].classList.contains("celda")){
                 tablero.rows[i].cells[columna].classList.add("inactivo");
                 inactivas.push(`${i} ${columna}`);
             }
         }
         
         //desactivar diagonales
-        for (let i = -7; i < 8; i++) {
-            if (renglon + i >= 0 && renglon + i < 8 && columna + i >= 0 && columna + i < 8 && i != 0) {
+        for (let i = -6; i < 9; i++) {
+            if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i != 0 && tablero.rows[renglon + i].cells[columna + i].classList.contains("celda")) {
                 tablero.rows[renglon + i].cells[columna + i].classList.add("inactivo");
                 inactivas.push(`${renglon + i} ${columna + i}`);
             }
-            if (renglon - i >= 0 && renglon - i < 8 && columna + i >= 0 && columna + i < 8 && i != 0) {
+            if (renglon - i >= 1 && renglon - i < 9 && columna + i >= 1 && columna + i < 9 && i != 0 && tablero.rows[renglon - i].cells[columna + i].classList.contains("celda")) {
                 tablero.rows[renglon - i].cells[columna + i].classList.add("inactivo");
                 inactivas.push(`${renglon - i} ${columna + i}`);
             }
@@ -44,7 +44,7 @@ function colocarReina(celda){
         reinas++;
 
         //reactivar renglones y columnas
-        for (let i = 0; i < 8; i++) {
+        for (let i = 1; i < 9; i++) {
             // QUITA 1 COORDENADA INDEX INACTIVO
             if (inactivas.includes(`${i} ${columna}`)) {
                 index = inactivas.indexOf(`${i} ${columna}`);
@@ -64,8 +64,8 @@ function colocarReina(celda){
         }
         
         //reactivar diagonales
-        for (let i = -7; i < 8; i++) {
-            if (renglon + i >= 0 && renglon + i < 8 && columna + i >= 0 && columna + i < 8 && i !== 0) {
+        for (let i = -6; i < 9; i++) {
+            if (renglon + i >= 1 && renglon + i < 9 && columna + i >= 1 && columna + i < 9 && i !== 0) {
                 if (inactivas.includes(`${renglon + i} ${columna + i}`)) {
                     index = inactivas.indexOf(`${renglon + i} ${columna + i}`);
                     inactivas.splice(index, 1)
@@ -74,7 +74,7 @@ function colocarReina(celda){
                     tablero.rows[renglon + i].cells[columna + i].classList.remove("inactivo");
                 }
             }
-            if (renglon - i >= 0 && renglon - i < 8 && columna + i >= 0 && columna + i < 8 && i !== 0) {
+            if (renglon - i >= 1 && renglon - i < 9 && columna + i >= 1 && columna + i < 9 && i !== 0) {
                 if (inactivas.includes(`${renglon - i} ${columna + i}`)) {
                     index = inactivas.indexOf(`${renglon - i} ${columna + i}`);
                     inactivas.splice(index, 1)

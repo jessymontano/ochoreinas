@@ -3,15 +3,30 @@
     src: url(../fonts/pixellari.woff) format('woff');
 }
 
-body{
-    margin: 0;
+p{
+    font-size: x-large;
+    margin: 1vh;
+    color:white;
 }
 
-p{
+body{
+    margin: 0;
     text-align: center;
     font-family: pixellari, sans-serif;
     font-size: larger;
+    background-image: url(../img/mesa.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+input{
     margin-top: 1vh;
+    border: none;
+    font-family: pixellari, sans-serif;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 1vh;
+    padding: 1vh;
 }
 
 div.ochoreinas{
@@ -24,6 +39,7 @@ div.ochoreinas{
     padding: 2vw;
     padding-left: 0;
     color:blanchedalmond;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 #ganaste{
@@ -42,8 +58,8 @@ div.ochoreinas{
 
 table{
     border-collapse: collapse;
-    outline: 2vw ridge #5d311f;
-    margin: 6vh auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 1vh auto;
     width: 40vw;
     height: 40vw;
 }
@@ -54,6 +70,9 @@ tr, td{
 
 td.celda{
     background-image: none;
+    cursor: pointer;
+    height: 11%;
+    width: 11%;
 }
 
 td.celda:hover{
@@ -76,18 +95,17 @@ td.inactivo{
     pointer-events: none;
 }
 
-td{
-    cursor: pointer;
-    height: 5%;
-    width: 5%;
-}
-
 tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even){
     background-color: #1a0404;
 }
 
 tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     background-color: #ffe7bd;
+}
+
+td:first-child, td:last-child, tr:first-child > td, tr:last-child > td{
+    background-color: #72422e !important;
+    color: wheat;
 }
 
 @media only screen and (max-width: 768px) {
